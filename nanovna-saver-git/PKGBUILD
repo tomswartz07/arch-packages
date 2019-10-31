@@ -1,0 +1,25 @@
+# Maintainer: Tom Swartz <tom@tswartz.net>
+pkgname=nanovna-saver-git
+_gitname=nanovna-saver
+pkgver=0.01
+pkgrel=1
+pkgdesc="A tool for reading, displaying and saving data from the NanoVNA "
+arch=('any')
+url="https://github.com/mihtjel/nanovna-saver/releases/"
+license=('GPL')
+source=("git://github.com/mihtjel/nanovna-saver.git")
+depends=('python-pyserial' 'python-pyqt5' 'python-numpy' 'python-pip')
+sha256sums=('skip')
+
+pkgver() {
+  cd "$srcdir/$_gitname"
+  printf "0.r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+
+package() {
+  echo "blah"
+  cd "$srcdir/$_gitname"
+  python3 -m pip install .
+}
+
+# vim:set ts=2 sw=2 et:
