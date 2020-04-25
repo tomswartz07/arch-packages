@@ -1,0 +1,12 @@
+pkgbase = pgmetrics-bin
+	pkgdesc = Collect and display information and stats from a running PostgreSQL server
+	pkgver = 1.9.0
+	pkgrel = 1
+	url = https://github.com/rapidloop/pgmetrics
+	arch = x86_64
+	license = Apache
+	source = https://github.com/rapidloop/pgmetrics/releases/download/v1.9.0/pgmetrics_1.9.0_linux_amd64.tar.gz
+	sha256sums = SKIP
+
+pkgname = pgmetrics-bin
+

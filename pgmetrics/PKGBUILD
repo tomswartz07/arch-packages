@@ -1,0 +1,17 @@
+# Maintainer: Tom Swartz <tom+AUR@tswartz.net>
+pkgname=pgmetrics-bin
+_pkgname=pgmetrics
+pkgver=1.9.0
+pkgrel=1
+pkgdesc='Collect and display information and stats from a running PostgreSQL server'
+arch=('x86_64')
+url="https://github.com/rapidloop/$_pkgname"
+license=('Apache')
+source=("${url}/releases/download/v${pkgver}/${_pkgname}_${pkgver}_linux_amd64.tar.gz")
+sha256sums=('SKIP')
+
+package() {
+  install -Dm755 "${srcdir}/${_pkgname}_${pkgver}_linux_amd64/${_pkgname}" "${pkgdir}/usr/bin/${_pkgname}"
+}
+
+# vim:set ts=2 sw=2 et:
